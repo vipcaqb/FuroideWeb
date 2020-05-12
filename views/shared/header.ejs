@@ -1,0 +1,31 @@
+<section>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="logo">
+                <a href="#"><img class="ml-5" src="images/logo.gif" alt="isLogo"></a>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="navmenu" >
+                <ul>
+                    <li><a id="home" href="/"><%= __('Home') %></a></li>
+                    <li><a href="/news"><%= __('News') %></a></li>
+                    <li><a href="/company"><%= __('Company') %></a></li>
+                    <li><a href="/service"><%= __('Service') %></a></li>
+                    <li><a href="/contact"><%= __('Contact') %></a></li>
+                    <li>
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Language
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/change-lang/vi">Vietnamese</a>
+                            <a class="dropdown-item" href="/change-lang/jp">Japanese</a>
+                        </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

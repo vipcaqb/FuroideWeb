@@ -1,0 +1,68 @@
+body{
+  font-size: 13px;
+  margin: 0px 0px 0px 0px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* Start header */
+
+.logo img {
+  margin: 20px 0px;
+  width: 200px;
+}
+
+.navmenu{
+  margin: 20px 0px;
+}
+
+.navmenu ul{
+  list-style-type: none;
+}
+
+.navmenu ul li{
+  display: inline;
+  padding-left: 30px;
+}
+
+.navmenu ul li a{
+  color: black;
+}
+
+.navmenu ul li #home{
+  color: #f39c12;
+}
+
+/* End of header */
+
+/* Information */
+
+
+  /* map */
+#map {
+  height: 400px;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
+  margin: 40px 0px;
+  }
+
+/* End of information */
+
+
+
+/* News */
+
+
+.post img{
+  width: 95%;
+}
+
+#last-content {
+  background-color: 0 0 0 0.5;
+}
+
+
+.img-news:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+  transition: 0.2s;
+}
+/* End of news */
