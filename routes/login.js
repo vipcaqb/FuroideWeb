@@ -23,7 +23,8 @@ router.post('/',async (req,res) =>{
     
     // Create And  assign token
     const token = jwt.sign({ userId: user._id }, process.env.TOKEN_SECRET);
-    res.cookie('Authorization',token,{maxAge : "999999"});
+    res.cookie('Authorization',token,{maxAge : "900000"});
+    res.cookie('fullname',user.fullname,{maxAge: "900000"});
     return res.redirect("/admin");
 });
 

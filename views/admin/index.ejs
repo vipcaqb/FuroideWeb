@@ -1,8 +1,79 @@
-<h2>Admin index</h2>
-<ul class="list-group">
-    <li class="list-group-item"><a href="admin/news">Tin tức</a></li>
-    <li class="list-group-item"><a href="#">Thông tin công ty</a></li>
-    <li class="list-group-item"><a href="#">Hỗ trợ khách hàng</a></li>
-    <li class="list-group-item"><a href="#">Hòm thư</a></li>
-    <li class="list-group-item"><a href="#">QnA</a></li>
-  </ul>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+    <title>Furoide</title>
+
+    <!-- Bootstrap -->
+    <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
+	
+    <!-- bootstrap-progressbar -->
+    <link href="/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    
+
+    <!-- Custom Theme Style -->
+    <link href="/build/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <%- include('./shared/logo.ejs') %> 
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <%- include('./shared/quickinfo.ejs') %> 
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <%- include('./shared/sidebar.ejs') %> 
+            <!-- /sidebar menu -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <%- include('./shared/topnav.ejs') %> 
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <%- include('./index/content.ejs') %> 
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <%- include('./shared/footer.ejs') %> 
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="/vendors/nprogress/nprogress.js"></script>
+    <!-- iCheck -->
+    <script src="/vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="/vendors/skycons/skycons.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="/build/js/custom.min.js"></script>
+	
+  </body>
+</html>

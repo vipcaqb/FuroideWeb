@@ -6,16 +6,17 @@ var logger = require('morgan');
 var i18n = require('i18n');
 var mongo = require('mongoose');
 require('dotenv/config');
-//var bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var newsRouter = require('./routes/news');
 var testRouter = require('./routes/test');
 var loginRouter = require('./routes/login');
-var adminRouter = require('./routes/admin/index');
 var contactRouter = require('./routes/contact');
 var serviceRouter = require('./routes/service');
+var adminRouter = require('./routes/admin/index');
+var adminNewsRouter = require('./routes/admin/news');
 
 var app = express();
 
@@ -34,13 +35,13 @@ if (!db) {
   console.log("MongoDb Is Connecting");
 }
 
-//app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(i18n.init);
+app.use(bodyParser.json());
+//app.use(express.urlencoded());
 
 //language config
 i18n.configure({
@@ -55,9 +56,10 @@ app.use('/users', usersRouter);
 app.use('/news',newsRouter);
 app.use('/test',testRouter);
 app.use('/login',loginRouter);
-app.use('/admin',adminRouter);
 app.use('/contact',contactRouter);
 app.use('/service',serviceRouter);
+app.use('/admin',adminRouter);
+app.use('/admin/news',adminNewsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
