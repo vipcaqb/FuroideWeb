@@ -66,3 +66,20 @@ body{
   transition: 0.2s;
 }
 /* End of news */
+
+/* Contact */
+#contact {
+  display: flex;
+  padding-top: 5%;
+}
+
+#contact div {
+  flex: 1;
+}
+
+#contact .contact-img{
+  background: url('../images/header.png') no-repeat
+  center center/cover;
+}
+
+/* End of contact */

@@ -15,18 +15,16 @@ router.post('/',async (req,res) =>{
         return res.send("Ten dang nhap khong ton tai");
     }
 
-    //if password is correct
+    //if password is incorrect
     var validPassword = await bcrypt.compare(req.body.password,user.password);
     if(!validPassword) {
         return res.send('Sai mat khau');
     }
     
     // Create And  assign token
-    const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET)
-    return res.json({
-        token: token,
-        user: user
-    });
+    const token = jwt.sign({ userId: user._id }, process.env.TOKEN_SECRET);
+    res.cookie('Authorization',token,{maxAge : "999999"});
+    return res.redirect("/admin");
 });
 
 

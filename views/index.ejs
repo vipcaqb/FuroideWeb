@@ -22,47 +22,11 @@
           </>
     </div>
     <div class="container">
-        <div class="information mt-4">
-            <div class="card">
-                <div class="row p-2">
-                    <div class="col-md-3 font-weight-bold ml-3"><%= __('CompanyName') %></div>
-                    <div class="col-md-8 ">Tax accountant company Freuide (TAC No. 3090 Chiba Tax Accountant Association No. 83)</div>
-                </div>
-            </div>
-            <br>
-            <div class="card">
-                <div class="row p-2">
-                    <div class="col-md-3 font-weight-bold ml-3"><%= __('Representative') %></div>
-                    <div class="col-md-8 ">Junichi Sato (Tax Registered No. 76770)</div>
-                </div>
-            </div>
-            <br>
-            <div class="card">
-                <div class="row p-2">
-                    <div class="col-md-3 font-weight-bold ml-3"><%= __('Employee') %></div>
-                    <div class="col-md-8 ">Tetsuya Haneda (Tax Registration Number 126593)</div>
-                </div>
-            </div>
-            <br>
-            <div class="card">
-                <div class="row p-2">
-                    <div class="col-md-3 font-weight-bold ml-3"><%= __('Address') %></div>
-                    <div class="col-md-8 ">
-                            ■ Funabashi BUREAU <br>
-                            Yubinbango274-0065 Funabashi City, Chiba Prefecture Takanedai 6-33-20 <br>
-                            TEL: 0120-95-8985 (representative 047-461-9902) FAX: 047-461-9919 <br>
-                            <br>
-                            ■ response rate of Mori BUREAU <br>
-                            Yubinbango275-0028 Chiba 1-3-11 <br>
-                            Sonomori , Narashino, TEL: 047-407-4030 FAX: 047-407-4035 <br>
-                    </div>
-                </div>
-            </div>
-            <br>
-        </div>
+        <%- include('./service/content.ejs') %> 
+        <%- include('./contact/content.ejs') %> 
         <div class="row">
             <div id="map"></div>
-        </div>
+        </>
         <div class="navmenu" style="text-align: center; transform: translate(-25px,0px);">
             <ul>
                 <li><a href="#">Tin&nbsp;tức</a></li>
@@ -71,36 +35,7 @@
             </ul>
         </div>
     </div>
-    <footer>
-        <div class="container-fluid">
-            <div class="row bg-dark text-white">
-                <div class="col-md-4">
-                    <div class="h2 mt-2 ml-5">
-                        Furoide.
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="h2 mt-2">Thông tin liên hệ</div>
-                    <div class="row">
-                        <div class="col-md-6 mt-3">
-                            <div class="h4">Funabashi Bureau</div>
-                            <p><i class="fas fa-map-marker-alt" style="width: 20px;"></i>6-33-20 Takanedai, Funabashi-shi Chiba 274-0065</p>
-                            <p><i class="fas fa-phone" style="width: 20px;"></i>0120-95-8985 (Representative: 047-461-9902)</p>
-                            <p><i class="fas fa-fax" style="width: 20px;"></i>047-461-9919</p>
-                        </div>
-                        <div class="col-md-6 mt-3">
-                            <div class="h4">
-                                Sou no Mori Bureau
-                            </div>
-                            <p><i class="fas fa-map-marker-alt" style="width: 20px;"></i>1-3-11 Sonomori, Narashino, Chiba</p>
-                            <p><i class="fas fa-phone" style="width: 20px;"></i>047-407-4030</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </footer>
+    <%- include('./shared/footer.ejs') %> 
     <script>
         // Initialize and add the map
         function initMap() {
