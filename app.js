@@ -13,6 +13,7 @@ var usersRouter = require('./routes/users');
 var newsRouter = require('./routes/news');
 var testRouter = require('./routes/test');
 var loginRouter = require('./routes/login');
+var logoutRouter = require('./routes/logout');
 var contactRouter = require('./routes/contact');
 var serviceRouter = require('./routes/service');
 var adminRouter = require('./routes/admin/index');
@@ -35,13 +36,13 @@ if (!db) {
   console.log("MongoDb Is Connecting");
 }
 
-app.use(bodyParser.urlencoded({ extended: false }))
+//app.use(bodyParser.urlencoded({ extended: false }))
 app.use(logger('dev'));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(i18n.init);
 app.use(bodyParser.json());
-//app.use(express.urlencoded());
+app.use(express.urlencoded());
 
 //language config
 i18n.configure({
@@ -56,6 +57,7 @@ app.use('/users', usersRouter);
 app.use('/news',newsRouter);
 app.use('/test',testRouter);
 app.use('/login',loginRouter);
+app.use('/logout',logoutRouter);
 app.use('/contact',contactRouter);
 app.use('/service',serviceRouter);
 app.use('/admin',adminRouter);

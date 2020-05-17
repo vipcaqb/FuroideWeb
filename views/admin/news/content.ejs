@@ -48,12 +48,15 @@
                                             <td class=" "><%= data[i].date %> </td>
                                             <td class=" "><%= data[i].author %></td>
     
-                                            <td class="text-center"><a href="#"
+                                            <td class="text-center"><a href="/news/<%= data[i]._id %> " target="_blank"
                                                     class="btn btn-round btn-success btn-sm">View</a></td>
-                                            <td class="text-center"><a href="#"
+                                            <td class="text-center"><a href="/admin/news/edit/<%= data[i]._id %>"
                                                     class="btn btn-round btn-primary btn-sm">Edit</a></td>
-                                            <td class="text-center"><a href="#"
-                                                    class="btn btn-round btn-danger btn-sm">Delete</a></td>
+                                            <td class="text-center">
+                                                <form id="deleteForm" action="/admin/news/delete/<%=data[i]._id%>" method="POST" role="form">
+                                                    <input class="btn btn-round btn-danger btn-sm" onclick="confirmFunction()" type="submit" value="Delete"></input>
+                                                </form>
+                                            </td>
                                         </tr>
                                     <% } %> 
                                 </tbody>
@@ -86,3 +89,11 @@
         </div>
     </div>
 </div>
+<script>
+    function confirmFunction() {
+        var r = confirm("Are you sure?");
+        if (r == false) {
+            location.reload();
+        }
+    }
+</script>

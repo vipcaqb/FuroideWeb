@@ -1,0 +1,55 @@
+
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Add News</h3>
+            </div>
+
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5  form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <form action="/admin/news/edit/<%= data._id %> " method="POST">
+                    <div class="x_title">
+                        <h2>Tiêu đề </h2>
+                        <div>
+                            <input type="text" class="form-control has-feedback-left" id="inputSuccess4" name="vi_title" value="<%= data.vi_title %>" >
+                        </div>
+                    </div>
+                    <div class="">
+                        <h2>Nội dung</h2>
+                        <textarea id="editor" name="vi_content" >
+                            <%= data.vi_content %>
+                        </textarea>
+                    </div>
+                    <div class="mx-auto">
+                        <input class="btn btn-lg btn-success mt-3" type="submit" value="Xác nhận">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .ck-editor__editable_inline {
+        min-height: 400px;
+    }
+</style>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>

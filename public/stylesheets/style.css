@@ -83,3 +83,52 @@ body{
 }
 
 /* End of contact */
+
+/* Read one post*/
+
+#post-content h2{
+  margin: 30px 0px 50px 0px;
+}
+
+#post-content p{
+  margin-right: 30px;
+}
+
+#post-content #date, #author{
+  font-size: 11px;
+  height: 2px;
+}
+
+#post-content #main-content {
+  margin-top: 30px;
+  min-height: 500px;
+}
+
+#post-nav h3 {
+  margin-top: 20px;
+  font-size: 22px;
+  
+}
+
+#post-nav h3 a{
+  color: black;
+  font-weight: 500;
+  border-bottom: 1px solid black;
+  
+}
+
+#post-nav div{
+  margin-left: 0px;
+  margin-top: 20px;
+}
+
+#post-nav div article{
+  min-height: 50px;
+}
+
+#post-nav div article a{
+  color: black;
+  min-height: 100px;
+}
+
+/* End of read one post */
