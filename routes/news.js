@@ -5,7 +5,7 @@ var News = require('../models/news');
 //Get news list
 router.get('/',async (req,res) =>{
     try {
-        var items = await News.find().limit(10).sort({date: 1});
+        var items = await News.find().limit(10).sort({date: -1});
         console.log('Ok');
     } catch (error) {
         console.log("Error");

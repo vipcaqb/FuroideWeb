@@ -8,14 +8,14 @@
                 <div id="last-content" class="card text-white">
                     <a href="/news/<%= data[9]._id %>#"><img class="card-img" src="images/header.png" alt="Card image"></a>
                     <div class="card-img-overlay">
-                      <a class="h5 title-news text-dark " href="/news/<%= data[9]._id %> " > 
+                      <a class="h5 title-news text-dark " href="/news/<%= data[0]._id %> " > 
                           <% if(lang == "vi") {%>
-                            <%= data[9].vi_title %> 
+                            <%= data[0].vi_title %> 
                           <%} else {%>
-                              <%= data[9].jp_title %> 
+                              <%= data[0].jp_title %> 
                           <% } %>
                     </a>
-                      <p class="card-text text-dark"> <%= data[9].date %>  </p>
+                      <p class="card-text text-dark"> <%= data[0].date %>  </p>
                     </div>
                 </div>
             </div>
@@ -27,11 +27,11 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <a class="text-dark" href="/news/<%= data[8]._id %>" class="h5 mt-1">
+                        <a class="text-dark" href="/news/<%= data[1]._id %>" class="h5 mt-1">
                             <% if(lang == "vi") {%>
-                                <%= data[8].vi_title %> 
+                                <%= data[1].vi_title %> 
                             <%} else {%>
-                                <%= data[8].jp_title %> 
+                                <%= data[1].jp_title %> 
                             <% } %>
                         </a>
                     </div>
@@ -39,15 +39,15 @@
                 <div class="row">
                     <div class="col-lg-6 mt-1 mb-1">
                         <div class="post">
-                            <a href="/news/<%= data[7]._id %>"><img class="img-news" src="images/header.png" alt=""></a>
+                            <a href="/news/<%= data[2]._id %>"><img class="img-news" src="images/header.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <a class="text-dark" href="/news/<%= data[7]._id %>" class="h5 mt-1">
+                        <a class="text-dark" href="/news/<%= data[2]._id %>" class="h5 mt-1">
                             <% if(lang == "vi") {%>
-                                <%= data[7].vi_title %> 
+                                <%= data[2].vi_title %> 
                               <%} else {%>
-                                  <%= data[7].jp_title %> 
+                                  <%= data[2].jp_title %> 
                               <% } %>
                         </a>
                     </div>
@@ -55,15 +55,15 @@
                 <div class="row">
                     <div class="col-lg-6 mt-1 mb-1">
                         <div class="post">
-                            <a href="/news/<%= data[6]._id %>"><img class="img-news" src="images/header.png" alt=""></a>
+                            <a href="/news/<%= data[3]._id %>"><img class="img-news" src="images/header.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <a class="text-dark" href="/news/<%= data[6]._id %>" class="h5 mt-1">
+                        <a class="text-dark" href="/news/<%= data[3]._id %>" class="h5 mt-1">
                             <% if(lang == "vi") {%>
-                                <%= data[6].vi_title %> 
+                                <%= data[3].vi_title %> 
                               <%} else {%>
-                                  <%= data[6].jp_title %> 
+                                  <%= data[3].jp_title %> 
                               <% } %>
                         </a>
                     </div>
@@ -75,7 +75,7 @@
     <div class="mt-5">
         <div class="mt-4" style="box-shadow: 0px 8px 20px gray;">
             <div class="row ml-2">
-                <% for (let i=5;i>=3;i--) {%> 
+                <% for (let i=4;i<=6;i++) {%> 
                     <div class="col-lg-4 mt-4 mb-4 justify-content-center">
                         <div class="post">
                             <a href="news/<%= data[i]._id %>"><img class="img-news" src="images/header.png" alt=""></a>
@@ -93,7 +93,7 @@
     
             <div class="row mt-3 ml-2">
                 <div class="row ml-2 mr-2">
-                    <% for (let i=2;i>=0;i--) {%> 
+                    <% for (let i=7;i<=9;i++) {%> 
                         <div class="col-lg-4 mt-4 mb-4 justify-content-center">
                             <div class="post">
                                 <a href="news/<%= data[i]._id %>"><img class="img-news" src="images/header.png" alt=""></a>
